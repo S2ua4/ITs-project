@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}{{ post.title }} - BookBlog{% endblock %}
+
+{% block content %}
+<article>
+  <h1 class="h3">{{ post.title }}</h1>
+  <p class="text-muted small">{{ post.created_at|date:"Y-m-d H:i" }}</p>
+  <hr>
+  <div class="bb-postbody">
+    {{ post.content|safe }}  {# 데모용. 운영땐 sanitize 권장 #}
+  </div>
+  <div class="mt-4">
+    <a class="btn btn-outline-secondary" href="/">← 목록</a>
+  </div>
+</article>
+{% endblock %}

@@ -1,0 +1,60 @@
+/* 기본 여백/폰트 */
+body { letter-spacing: .1px; }
+
+/* 헤더 */
+.bb-logo { font-size: 24px; }
+.bb-header { background-color: #fff; }
+
+/* 히어로 띠 (연한 민트색 + 질감 느낌) */
+.bb-hero { background: #c7e2d8; }
+.bb-hero-inner { height: 70px; background:
+  linear-gradient(90deg, rgba(255,255,255,.0) 0%, rgba(255,255,255,.2) 60%, rgba(255,255,255,.0) 100%);
+}
+
+/* 좌측 사이드바 */
+.bb-sidelink {
+  display:block; padding:.5rem 0; color:#333; text-decoration:none;
+}
+.bb-sidelink:hover { text-decoration: underline; }
+
+/* 글 링크 */
+.bb-postlink { text-decoration: none; color: #111; }
+.bb-postlink:hover { text-decoration: underline; }
+
+/* 빈 상태 */
+.bb-emptystate { color:#666; }
+.bb-empty-icon {
+  width: 76px; height: 52px; opacity:.35;
+  background:
+  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="76" height="52" viewBox="0 0 76 52"><g fill="none" stroke="%23999" stroke-width="3"><rect x="3" y="12" width="70" height="37" rx="2" ry="2"/><path d="M3 12h22l6 7h14l6-7h22"/></g></svg>')
+  center/contain no-repeat;
+}
+
+/* 여백/카드 */
+.card { border-radius: 10px; }
+.card + .card { margin-top: 1rem; }
+
+/* 푸터 */
+.bb-footer { background:#fff; }
+
+/* 헤더 로고 */
+.navbar-brand { font-size: 22px; letter-spacing: .2px; }
+
+/* 히어로(상단 연한 띠) */
+.bb-hero { background: #c7e2d8; }
+.bb-hero-inner { height: 70px; }
+
+/* 글 링크 */
+.bb-postlink { text-decoration: none; color: #111; }
+.bb-postlink:hover { text-decoration: underline; }
+
+/* 카드 살짝 둥글게 */
+.card { border-radius: 10px; }
+
+/* 빈 상태 아이콘 (SVG) */
+.bb-empty-icon {
+  width: 76px; height: 52px; opacity:.35;
+  background:
+  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="76" height="52" viewBox="0 0 76 52"><g fill="none" stroke="%23999" stroke-width="3"><rect x="3" y="12" width="70" height="37" rx="2" ry="2"/><path d="M3 12h22l6 7h14l6-7h22"/></g></svg>')
+  center/contain no-repeat;
+}

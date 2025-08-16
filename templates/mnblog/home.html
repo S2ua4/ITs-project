@@ -1,11 +1,32 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>Mini Blog</title>
-</head>
-<body>
-    <h1>환영합니다, Mini Blog에 오신 것을 환영합니다!</h1>
-    <p>이곳은 로그인 후 보이는 메인 페이지입니다.</p>
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}최신 글 - MiniBlog{% endblock %}
+
+{% block content %}
+<h1 class="h4 mb-3">최신 글</h1>
+
+{% if posts %}
+  <div class="row row-cols-1 row-cols-md-2 g-3">
+    {% for p in posts %}
+    <div class="col">
+      <article class="card h-100">
+        <div class="card-body">
+          <h2 class="h5 mb-1">
+            <a class="bb-postlink" href="{% url 'mnblog:detail' p.slug %}">{{ p.title }}</a>
+          </h2>
+          <p class="text-muted small mb-2">{{ p.created_at|date:"Y-m-d H:i" }}</p>
+          <p class="mb-0 text-truncate">{{ p.content|striptags }}</p>
+        </div>
+      </article>
+    </div>
+    {% endfor %}
+  </div>
+{% else %}
+  <div class="text-center py-5 text-muted">
+    <div class="bb-empty-icon mx-auto mb-3" aria-hidden="true"></div>
+    게시물이 없습니다.
+    <div class="mt-3">
+      <a class="btn btn-dark" href="/post/new/">글쓰기</a>
+    </div>
+  </div>
+{% endif %}
+{% endblock %}
