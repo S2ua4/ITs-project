@@ -1,0 +1,1 @@
+print("github push 기능 체크")
