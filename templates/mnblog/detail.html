@@ -9,6 +9,12 @@
   <div class="bb-postbody">
     {{ post.content|safe }}  {# 데모용. 운영땐 sanitize 권장 #}
   </div>
+
+  {% if post.image %}
+  <div class="mt-3">
+    <img src="{{ post.image.url }}" class="img-fluid rounded" alt="이미지">
+  </div>
+  {% endif %}
   <div class="mt-4">
     <a class="btn btn-outline-secondary" href="/">← 목록</a>
   </div>
